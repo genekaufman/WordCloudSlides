@@ -1,0 +1,10 @@
+Gene@Hoth MINGW64 /d/coursera/WordCloudSlides (master)
+$ git checkout --orphan gh-pages
+Switched to a new branch 'gh-pages'
+
+Gene@Hoth MINGW64 /d/coursera/WordCloudSlides (gh-pages)
+$ git push origin gh-pages
+Counting objects: 183, done.
+
+Gene@Hoth MINGW64 /d/coursera/WordCloudSlides (gh-pages)
+$ git push --set-upstream origin gh-pages

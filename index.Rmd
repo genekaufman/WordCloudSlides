@@ -1,37 +1,67 @@
 ---
+
 title       : Shiny WordCloud Pitch
 subtitle    : Coursera - Developing Data Products
 author      : Gene Kaufman
 job         : Data Newbie
-framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+framework   : io2012        # {io2012, html5slides, revealjs, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
-widgets     : []            # {mathjax, quiz, bootstrap}
+widgets     : [bootstrap]            # {mathjax, quiz, bootstrap}
 mode        : selfcontained # {standalone, draft}
 knit        : slidify::knit2slides
+
 ---
 
-## Shiny WordCloud
+## DO YOU LIKE ...  
 
-What is it? Did this work?
+# WORDS?  
 
---- 
+.fragment Of course you do!
 
-## What is a WordCloud?
+---
 
-Examples!
+## DO YOU LIKE ...  
 
---- 
+# CLOUDS?  
 
-## Why should you use mine?
+.fragment Who DOESN'T like clouds?
 
-Because it's reallllly cool
+---
 
---- 
+## IF YOU LIKE WORDS
 
-## How should you grade me?
-
-Highly!
+.fragment *and you do!*  
 
 
+## AND IF YOU LIKE CLOUDS
 
+.fragment *again... who DOESN'T like clouds?*  
+
+
+## THEN YOU ARE GOING TO LOVE
+
+.fragment my project, that you've already seen and formed a (**hopefully!**) positive opinion on, which is called...
+
+---
+
+## Shiny WordCloud Generator
+
+.fragment There are many different ways to build WordClouds; I based mine on a technique described on [r-bloggers.com](http://www.r-bloggers.com/builfding-wordclouds-in-r/).
+
+.fragment I wanted to make a fun project that would hopefully bring cheer into the world and smiles to the faces of my graders. I was convinced that I was the first and only person to think of using Shiny to make a WordCloud generator.
+
+---
+## Plot Time!
+
+Just for fun, let's compare how ridiculously good-looking the last 100 people were to the grade they gave me...
+
+```{r simple-plot, fig.height = 6, fig.align = 'center', message = F}
+require(ggplot2)
+mydf<-data.frame(rnorm(n = 100,mean=8.3),runif(n=100,min=1,max=10))
+names(mydf)<-c("grade","hotness")
+qplot(hotness,grade,data=mydf)
+
+```
+
+Ok... that was pretty pointless, but it's a neat graph, huh?

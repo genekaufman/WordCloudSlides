@@ -12,31 +12,28 @@ mode        : selfcontained # {standalone, draft}
 knit        : slidify::knit2slides
 
 ---
+<style>
+.title-slide {
+  background-color: lightblue
+}
 
-## DO YOU LIKE ...  
+.title-slide hgroup > h1{
+ font-family: 'Oswald', 'Helvetica', sanserif; 
+}
 
-# WORDS?  
+.title-slide hgroup > h1, 
+.title-slide hgroup > h2 {
+  color: darkgreen ;  /* ; #EF5150*/
+}
+</style>
+## DO YOU LIKE WORDS?
 
-.fragment Of course you do!
-
----
-
-## DO YOU LIKE ...  
-
-# CLOUDS?  
-
-.fragment Who DOESN'T like clouds?
-
----
-
-## IF YOU LIKE WORDS
-
-.fragment *and you do!*  
+.fragment *of COURSE you do!*
 
 
-## AND IF YOU LIKE CLOUDS
+## DO YOU LIKE CLOUDS?
 
-.fragment *again... who DOESN'T like clouds?*  
+.fragment *who DOESN'T like clouds?*  
 
 
 ## THEN YOU ARE GOING TO LOVE
@@ -49,19 +46,29 @@ knit        : slidify::knit2slides
 
 .fragment There are many different ways to build WordClouds; I based mine on a technique described on [r-bloggers.com](http://www.r-bloggers.com/builfding-wordclouds-in-r/).
 
-.fragment I wanted to make a fun project that would hopefully bring cheer into the world and smiles to the faces of my graders. I was convinced that I was the first and only person to think of using Shiny to make a WordCloud generator.
+.fragment I wanted to make a fun project that would hopefully bring cheer into the world and smiles to the faces of my graders. I realize that my projects (both the Shiny app as well as this Slidify slide deck) are pretty silly, but I hope that you realize that this is just a reflection of my personality and not of my skillset.
 
 ---
-## Plot Time!
-
+## Plot time!
 Just for fun, let's compare how ridiculously good-looking the last 100 people were to the grade they gave me...
 
-```{r simple-plot, fig.height = 6, fig.align = 'center', message = F}
+```{r simpleplot, fig.height = 4, fig.align = 'center', message = F}
 require(ggplot2)
-mydf<-data.frame(rnorm(n = 100,mean=8.3),runif(n=100,min=1,max=10))
-names(mydf)<-c("grade","hotness")
+mydf<-data.frame(grade=rnorm(n = 100,mean=8.3,sd=0.2),hotness=rnorm(n = 100,mean=9.3,sd=0.1))
 qplot(hotness,grade,data=mydf)
 
 ```
 
 Ok... that was pretty pointless, but it's a neat graph, huh?
+
+---
+## Data time!  
+Here's a quick look at the fake data that I generated on the previous slide:  
+
+```{r dataout1, results="markup"}
+summary(mydf)
+
+```
+
+Thank you for your time, and good luck in your continued studies!
+

@@ -1,3 +1,5 @@
 base
 slidify
 ggplot2
+knitr
+dplyr
